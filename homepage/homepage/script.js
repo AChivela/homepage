@@ -35,24 +35,7 @@ if (saudacao) {
   relogio.textContent = new Date().toLocaleTimeString("pt-PT");
 }
 
-// ===== 3. Filtro de projetos (projetos.html) =====
-const botoesFiltro = document.querySelectorAll(".filtro");
-botoesFiltro.forEach((botao) => {
-  botao.addEventListener("click", () => {
-    const filtro = botao.dataset.filtro;
-
-    botoesFiltro.forEach((b) => {
-      b.classList.toggle("btn-primary", b === botao);
-      b.classList.toggle("btn-outline-primary", b !== botao);
-    });
-
-    document.querySelectorAll(".projeto").forEach((p) => {
-      p.classList.toggle("d-none", filtro !== "todos" && p.dataset.categoria !== filtro);
-    });
-  });
-});
-
-// ===== 4. Validação do formulário (contactos.html) =====
+// ===== 3. Validação do formulário (contactos.html) =====
 const form = document.getElementById("form-contacto");
 if (form) {
   const aviso = document.getElementById("aviso");
