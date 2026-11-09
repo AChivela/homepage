@@ -1,0 +1,211 @@
+/* ===== Variáveis (tema claro por defeito) ===== */
+:root {
+  --cor-marca: #512bd4;        /* violeta do .NET */
+  --cor-marca-escura: #3b1fa0;
+  --cor-fundo: #f6f5fb;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1e1b2e;
+  --cor-suave: #5b5870;
+  --cor-borda: #dcd8ee;
+  --cor-destaque: #ffd166;
+}
+
+[data-theme="dark"] {
+  --cor-marca: #9b83ff;
+  --cor-marca-escura: #b9a8ff;
+  --cor-fundo: #15121f;
+  --cor-superficie: #1f1b2e;
+  --cor-texto: #eeeaff;
+  --cor-suave: #b0abc9;
+  --cor-borda: #343049;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+h1, h2, h3, .brand {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--cor-texto);
+}
+
+p { max-width: 65ch; }
+
+a { color: var(--cor-marca); }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--cor-destaque);
+  color: #1e1b2e;
+  z-index: 10;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+/* ===== Cabeçalho e menu ===== */
+.site-header {
+  background-color: var(--cor-superficie);
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.site-header .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.brand {
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu .nav-link {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  color: var(--cor-suave);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu .nav-link:hover { color: var(--cor-marca); }
+
+.menu .nav-link.active {
+  background-color: var(--cor-marca);
+  color: #ffffff;
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.hero-saudacao {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.9rem;
+  background-color: var(--cor-destaque);
+  color: #1e1b2e;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.hero-titulo {
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  margin-bottom: 1.25rem;
+}
+
+.hero-texto {
+  font-size: 1.2rem;
+  color: var(--cor-suave);
+  margin-bottom: 1.75rem;
+}
+
+.hero-relogio {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: var(--cor-suave);
+}
+
+#relogio, #contador {
+  font-variant-numeric: tabular-nums;
+  color: var(--cor-marca);
+}
+
+/* ===== Secções ===== */
+.secao { padding: 3.5rem 0; }
+
+.contacto { max-width: 640px; }
+
+.competencias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.competencias li {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: var(--cor-superficie);
+}
+
+/* ===== Cartões ===== */
+.card-projeto {
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+}
+
+.card-projeto .card-text { color: var(--cor-suave); }
+
+/* ===== Tabela e formulário ===== */
+.table {
+  --bs-table-bg: transparent;
+  color: var(--cor-texto);
+}
+
+.form-control {
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+}
+
+.form-control.invalido { border-color: #d93a3a; }
+
+/* ===== Botões ===== */
+.btn-primary {
+  background-color: var(--cor-marca);
+  border-color: var(--cor-marca);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: var(--cor-marca-escura);
+  border-color: var(--cor-marca-escura);
+}
+
+/* ===== Rodapé ===== */
+.site-footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--cor-borda);
+  color: var(--cor-suave);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

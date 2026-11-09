@@ -1,0 +1,31 @@
+SPECIFICATION - Homepage pessoal
+================================
+
+1. TAGS HTML DISTINTAS (10)
+   1.  <header>   - cabeçalho do site com o menu
+   2.  <nav>      - navegação principal
+   3.  <ul>       - lista do menu e das competências
+   4.  <li>       - itens das listas
+   5.  <a>        - links entre as 4 páginas
+   6.  <main>     - conteúdo principal de cada página
+   7.  <section>  - blocos de conteúdo
+   8.  <h1>       - título principal de cada página
+   9.  <button>   - botões (tema, filtros, enviar)
+   10. <form>     - formulário de contactos
+   (Também usadas: h2, h3, p, article, table, input, textarea, label, strong, span, footer)
+
+2. PROPRIEDADES CSS (styles.css)
+   1. color
+   2. background-color
+   3. padding
+   4. border-radius
+   5. font-size
+   (Seletores usados: body, h1, a, .hero, .card-projeto, .menu .nav-link, #relogio, :focus-visible)
+
+3. JAVASCRIPT
+   Usei JavaScript para tornar o site interativo: alternar tema claro/escuro, mostrar saudação,
+   relógio e contador de tempo na página inicial, filtrar projetos e validar o formulário de contactos.
+
+4. BOOTSTRAP
+   Integrei o sistema de grelha (container, row, col), botões (btn), cartões (card), badges,
+   tabela (table), alertas (alert) e controlos de formulário (form-control), além de classes utilitárias (d-flex, gap, mt).
